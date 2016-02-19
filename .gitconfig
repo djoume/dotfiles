@@ -1,0 +1,15 @@
+[user]
+	name = Djoume Salvetti
+	email = djoume.salvetti@shopify.com
+[color]
+  ui = true
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  pub = "!git push -u origin $(git branch-name)"
+  delete-merged-branches = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+[core]
+  excludesFile = ~/.gitignore
+[push]
+	default = simple
