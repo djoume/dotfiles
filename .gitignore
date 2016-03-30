@@ -3,3 +3,4 @@
 *.swo
 *.pyc
 tags
+.DS_Store
