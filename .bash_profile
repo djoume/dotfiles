@@ -14,3 +14,6 @@ export PROMPT_COMMAND='__git_ps1 "\t \u@\h:\w" " \\\$ "'
 export PROMPT_COMMAND='__git_ps1 "\t \w" " \\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=1
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+
+export GOPATH=$HOME
+export PATH=$GOPATH/bin:$PATH
