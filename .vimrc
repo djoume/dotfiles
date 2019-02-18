@@ -46,6 +46,7 @@ set backspace=indent,eol,start
 let mapleader=" "
 set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+inoremap jj <Esc>
 
 
 " Syntastic BEGIN
