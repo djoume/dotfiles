@@ -47,9 +47,15 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 " ale begin
 let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
 " ale end
 
-" coc begin
+" yats
+set re=2
+" yats
+
+" coc
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -179,4 +185,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-" coc end
+" coc
