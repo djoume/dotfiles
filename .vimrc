@@ -46,7 +46,14 @@ nmap <silent> <leader>g :TestVisit<CR>
 " vim-test
 
 " ale begin
-let b:ale_fixers = ['prettier', 'eslint']
+
+" In ~/.vim/vimrc, or somewhere similar.
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
+\   'typescriptreact': ['prettier', 'eslint'],
+\}
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 " ale end
