@@ -28,3 +28,6 @@ export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFI
 export PROMPT_COMMAND='__git_ps1 "\t \u@\h:\w" " \\\$ "'
 export PROMPT_COMMAND='__git_ps1 "\t \w" " \\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=1
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+if [ -e /Users/djoume/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/djoume/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
