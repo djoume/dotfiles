@@ -1,5 +1,6 @@
 export EMAIL=djoume.salvetti@shopify.com
 export EDITOR=vim
+export LANG=en_CA.UTF-8
 alias vi=vim
 alias ls='ls -G'
 
