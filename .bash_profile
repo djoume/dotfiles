@@ -4,11 +4,6 @@ export LANG=en_CA.UTF-8
 alias vi=vim
 alias ls='ls -G'
 
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-
-export GOPATH=$HOME
-export PATH=$GOPATH/bin:$PATH
-
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -31,7 +26,25 @@ export PROMPT_COMMAND='__git_ps1 "\t \u@\h:\w" " \\\$ "'
 export PROMPT_COMMAND='__git_ps1 "\t \w" " \\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=1
 
-[ -f /opt/dev/sh/nvm/nvm.sh ] && source /opt/dev/sh/nvm/nvm.sh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-if [ -e /Users/djoume/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/djoume/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
