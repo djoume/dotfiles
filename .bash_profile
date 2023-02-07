@@ -27,8 +27,10 @@ export PROMPT_COMMAND='__git_ps1 "\t \[\033[01;34m\]\w\[\033[00m\]" " \\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=1
 
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
+if [ -d $PYENV_ROOT ]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 if [ -f "$HOME/.profile" ]; then
   source "$HOME/.profile"
