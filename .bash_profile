@@ -29,3 +29,7 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null && export PATH="$PYENV_ROOT/bin:$PATH"
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
+
+if [ -f "$HOME/.profile" ]; then
+  source "$HOME/.profile"
+fi
