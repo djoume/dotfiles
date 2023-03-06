@@ -12,6 +12,7 @@ Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'altercation/vim-colors-solarized'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 
@@ -34,6 +35,7 @@ let mapleader=" "
 set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set clipboard=unnamed
+set incsearch
 inoremap jj <Esc>
 
 
