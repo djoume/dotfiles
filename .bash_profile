@@ -11,6 +11,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export DENO_INSTALL="/home/djoume/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+
 if [ -x /opt/homebrew/bin/brew ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 
