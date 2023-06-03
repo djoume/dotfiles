@@ -13,8 +13,10 @@ Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'github/copilot.vim'
 call plug#end()
-
 
 syntax on
 set bg=light
@@ -70,3 +72,13 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
 let g:ale_virtualtext_prefix = '%comment% %linter% %type%: '
 " ale end
+
+" fzf begin
+nnoremap <silent> <leader>ff :Files<CR>
+nnoremap <silent> <leader>fg :GFiles<CR>
+nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>fh :History<CR>
+nnoremap <silent> <leader>fl :Lines<CR>
+nnoremap <silent> <leader>fr :Rg<CR>
+nnoremap <silent> <leader>fc :Commits<CR>
+" fzf end
