@@ -40,6 +40,7 @@ set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set clipboard=unnamed
 set incsearch
+set nohlsearch
 inoremap jj <Esc>
 set shell=bash\ -l
 tnoremap <Esc> <C-\><C-n>
