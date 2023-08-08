@@ -1,7 +1,7 @@
 export EMAIL=djoume@taket.org
-export EDITOR=vim
+export EDITOR=nvim
 export LANG=en_CA.UTF-8
-alias vi=vim
+alias vi=nvim
 alias ls='ls -G'
 
 
