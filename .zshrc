@@ -123,3 +123,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/djoume/src/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/djoume/src/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/djoume/src/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/djoume/src/google-cloud-sdk/completion.zsh.inc'; fi
