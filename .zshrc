@@ -129,3 +129,5 @@ if [ -f '/Users/djoume/src/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/djou
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/djoume/src/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/djoume/src/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(rbenv init - zsh)"
