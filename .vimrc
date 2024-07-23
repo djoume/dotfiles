@@ -19,11 +19,18 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'sainnhe/everforest'
 call plug#end()
 
 syntax on
+if (has("termguicolors"))
+  set termguicolors
+endif
 set bg=light
-colorscheme solarized
+let g:everforest_background = 'medium'
+let g:everforest_better_performance = 1
+colorscheme everforest
 let g:python_recommended_style = 0
 filetype on
 filetype indent on
