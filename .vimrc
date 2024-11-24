@@ -12,7 +12,7 @@ Plug 'tpope/vim-surround'
 "Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'janko-m/vim-test'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -259,6 +259,11 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
 endif
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+autocmd FileType typescript let b:coc_root_patterns = ['tsconfig.json']
+autocmd FileType typescriptreact let b:coc_root_patterns = ['tsconfig.json']
+autocmd FileType javascript let b:coc_root_patterns = ['package.json']
+autocmd FileType javascriptreact let b:coc_root_patterns = ['package.json']
 
 " coc end
 

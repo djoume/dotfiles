@@ -1,13 +1,16 @@
 {
+  "workspace.bottomUpFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.experimental.useFlatConfig": true,
   "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "css"
+    "css",
+    "html"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
