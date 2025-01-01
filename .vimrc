@@ -18,9 +18,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/everforest'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 syntax on
@@ -276,3 +279,15 @@ nnoremap <silent> <leader>fl :Lines<CR>
 nnoremap <silent> <leader>fr :Rg<CR>
 nnoremap <silent> <leader>fc :Commits<CR>
 " fzf end
+
+" CopilotChat begin
+lua << EOF
+require("CopilotChat").setup {
+  mappings = {
+    complete = {
+      insert = "<C-Space>",
+    },
+  },
+}
+EOF
+" CopilotChat end
